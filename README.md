@@ -10,14 +10,14 @@ This is a natural language processing app that offers communications practice wi
 
 ```
 git clone https://github.com/tig3r66/royal-college-practice.git
-cd osce-gpt
+cd royal-college-practice
 ```
 
 3. Create and activate the Conda environment by typing in your command line/terminal:
 
 ```bash
-conda create -n osce python=3.8
-conda activate osce
+conda create -n practice_env python=3.8
+conda activate practice_env
 ```
 
 4. Install the dependencies  by typing in your command line/terminal:
