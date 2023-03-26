@@ -34,19 +34,3 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-
-To practice with different clinical scenarios, change the `instructions` string in [test.py](https://github.com/tig3r66/osce-gpt/blob/main/test.py) or [streamlit_app.py](https://github.com/tig3r66/osce-gpt/blob/main/streamlit_app.py).
-
-#### Command-Line App
-
-To run the command-line app, type in your command line/terminal:
-
-Mac:
-```bash
-python3 test.py
-```
-
-Windows:
-```bash
-python test.py
-```
