@@ -1,0 +1,9 @@
+{
+    "hemorrhage": [
+        {
+            "case_info": "The case is a previously healthy 26 year-old male presents to the emergency room with GCS 15 and a positive Romberg. Embolization for cure is unlikely to be effective given small distal vessels supplying. Little role for preop partial embo. Radiosurgery an option. Difficult to target. Latency period risk. Surgery likely best approach. Surgical approach is best prone, suboccipital craniotomy. Avm will be found by picking up the PICA and following the artery through the prepyramidal/suboccipital fissure (fissure above the pyramid).",
+            "images": ["cases/case2-img1.png", "cases/case2-img2.png"],
+            "img_descriptions": ["CT scan of a hemorrhage in the midline cerebellar region in the vermis", "Suspicious for small avm. Supply from distal PICA. Venous drainage overlies the distal PICA. Travels rostral along midline and then anterior towards the tentorium."]
+        }
+    ]
+}

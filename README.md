@@ -1,0 +1,52 @@
+# OSCE-GPT
+
+This is a natural language processing app that offers communications practice with patients across various clinical scenarios. Upon finishing the clinical scenario, the app provides AI-generated feedback and AI-generated SOAP notes at the user's request. This app is powered by Streamlit, OpenAI Whisper API, Google text-to-speech API, and GPT.
+
+## Installation
+
+1. Ensure that you have [Homebrew](https://brew.sh/), [Git](https://git-scm.com/downloads), and [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
+
+2. Clone this repository and set your working directory to `osce-gpt` by typing in your command line/terminal:
+
+```
+git clone https://github.com/tig3r66/royal-college-practice.git
+cd osce-gpt
+```
+
+3. Create and activate the Conda environment by typing in your command line/terminal:
+
+```bash
+conda create -n osce python=3.8
+conda activate osce
+```
+
+4. Install the dependencies  by typing in your command line/terminal:
+
+```bash
+brew install portaudio
+pip install -r requirements.txt
+```
+
+5. Create a `.env` file and add your OpenAI API key as such (see `.env.example` for an example). You can get an API by following [these instructions](https://help.openai.com/en/articles/4936850-where-do-i-find-my-secret-api-key).
+
+5. Run the Streamlit website by typing in your command line/terminal:
+
+```bash
+streamlit run app.py
+```
+
+To practice with different clinical scenarios, change the `instructions` string in [test.py](https://github.com/tig3r66/osce-gpt/blob/main/test.py) or [streamlit_app.py](https://github.com/tig3r66/osce-gpt/blob/main/streamlit_app.py).
+
+#### Command-Line App
+
+To run the command-line app, type in your command line/terminal:
+
+Mac:
+```bash
+python3 test.py
+```
+
+Windows:
+```bash
+python test.py
+```

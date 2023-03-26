@@ -1,0 +1,15 @@
+gTTS
+numpy
+openai
+openai-whisper
+pandas
+playsound
+python-dotenv
+PyAudio
+pyttsx3
+requests
+SpeechRecognition
+streamlit
+tqdm
+transformers
+watchdog
