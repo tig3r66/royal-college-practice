@@ -36,3 +36,7 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+
+## Adding Clinical Scenarios
+
+You can add clinical scenarios by editing the [cases.json file](https://github.com/tig3r66/royal-college-practice/blob/main/cases.json).
