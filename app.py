@@ -44,7 +44,7 @@ class Exam:
         self.history = []
 
         # from cases json
-        self.images = CASES[self.option.strip().lower()][0]['images']
+        self.images = CASES[self.option.strip().lower()][0]['images'] if len(CASES[self.option.strip().lower()][0]['images']) > 0 else None
 
     def transcribe(self, audio):
         try:
@@ -95,9 +95,10 @@ class Exam:
             return self.transcribe(audio)
     
     def show_image(self, response, imgs_path):
-        for img_path in imgs_path:
-            if img_path in response:
-                st.image(img_path, width=400)
+        if imgs_path:
+            for img_path in imgs_path:
+                if img_path in response:
+                    st.image(img_path, width=400)
 
     def main(self):
         st.write("**Clinical scenario initialized.** You can end the scenario by clicking the *stop* button.")
@@ -178,12 +179,15 @@ def create_prompt(cases, option):
     instructions = f"Instructions: You are an evaluator for a neurosurgery oral exam. Provide contextual information to the examinee as relevant, as the examinee does not have any information of the case beforehand. Speak as if you were talking the examinee. Treat this as an exam and do not provide words of encouragement. Provide hints if the examinee does not know the answer.\n\nContext:{cases[option.strip().lower()][0]['case_info']}" + "\nPlease write the image files in parentheses if you would like to use them in your questions. If you've already used an image, no need to include it in parentheses."
     images = cases[option.strip().lower()][0]['images']
 
-    image_prompt = '\n\nImages:\n'
-    for i in range(len(images)):
-        image_prompt += cases[option.strip().lower()][0]['images'][i]
-        image_prompt += ': '
-        image_prompt += cases[option.strip().lower()][0]['img_descriptions'][i]
-        image_prompt += '\n'
+    if len(images) > 0:
+        image_prompt = '\n\nImages:\n'
+        for i in range(len(images)):
+            image_prompt += cases[option.strip().lower()][0]['images'][i]
+            image_prompt += ': '
+            image_prompt += cases[option.strip().lower()][0]['img_descriptions'][i]
+            image_prompt += '\n'
+    else:
+        image_prompt = ''
 
     return instructions + image_prompt
 
