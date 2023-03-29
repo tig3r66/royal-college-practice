@@ -1,6 +1,6 @@
 # Royal College Oral Practice App
 
-This is a natural language processing app that offers communications practice with patients across various clinical scenarios. Upon finishing the clinical scenario, the app provides AI-generated feedback and AI-generated SOAP notes at the user's request. This app is powered by Streamlit, OpenAI Whisper API, Google text-to-speech API, and GPT.
+This is a natural language processing app that offers practice with Royal College oral exam clinical scenarios. Upon finishing the clinical scenario, the app provides AI-generated feedback and AI-generated SOAP notes at the user's request. This app is powered by Streamlit, OpenAI Whisper API, Google text-to-speech API, and GPT.
 
 ![Screenshot of the app](https://raw.githubusercontent.com/tig3r66/royal-college-practice/main/example.png)
 
